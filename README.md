@@ -68,7 +68,7 @@ Follow the standard flashing procedure, e.g.:
 ### For Windows/WSL2 users
 
  * Make sure both `espflash` and `espmonitor` are installed in the **Windows** environment.
-   - Install rust
+   - Install Rust
    - `cargo install espflash`
    - `cargo install espmonitor`
  * Then, from your **WSL2 Linux** environment:
