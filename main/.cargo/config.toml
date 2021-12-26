@@ -16,5 +16,5 @@ ESP_IDF_VERSION = { value = "master" }
 # so I have hardcoded a path. We could also pass `out`, but that means the ESP-IDF
 # is cleared any time `cargo clean` is run, and it takes a long time to re-download
 # https://github.com/esp-rs/esp-idf-sys/issues/44
-ESP_IDF_TOOLS_INSTALL_DIR = { value = "custom:/opt/rust-workspace/projects/esp32s2-workspace/.embuild", force = true }
+ESP_IDF_TOOLS_INSTALL_DIR = { value = "workspace" }
 ESP_IDF_SDKCONFIG_DEFAULTS = { value = "./sdkconfig.defaults", relative = true }
