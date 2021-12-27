@@ -1,4 +1,5 @@
 [workspace]
+authors = ["Ryan Cole <admin@ryanc.me>"]
 members = [
     'main',
     'ulp',
