@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "Workspace"
+		},
+		{
+			"path": "./main/src",
+			"name": "Main"
+		},
+		{
+			"path": "./ulp/src",
+			"name": "ULP"
+		}
+	],
+	"settings": {
+		"rust-analyzer.cargo.runBuildScripts": true,
+		"rust-analyzer.cargo.features": [
+			"native"
+		]
+	}
+}
