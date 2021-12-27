@@ -18,5 +18,10 @@
 		"rust-analyzer.cargo.features": [
 			"native"
 		]
+	},
+	"extensions": {
+		"recommendations": [
+			"matklad.rust-analyzer"
+		]
 	}
 }
