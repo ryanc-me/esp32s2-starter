@@ -17,6 +17,9 @@
 		"rust-analyzer.cargo.runBuildScripts": true,
 		"rust-analyzer.cargo.features": [
 			"native"
+		],
+		"rust-analyzer.diagnostics.disabled": [
+			"macro-error"
 		]
 	},
 	"extensions": {
