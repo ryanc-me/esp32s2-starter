@@ -6,3 +6,13 @@ args = [
     "--target",
     "xtensa-esp32s2-espidf",
 ]
+
+[tasks.doc]
+toolchain = "esp"
+command = "cargo"
+args = [
+    "doc",
+    "--target",
+    "xtensa-esp32s2-espidf",
+    "--open",
+]
