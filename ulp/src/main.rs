@@ -8,7 +8,11 @@ use esp_idf_hal::prelude::*;
 extern crate panic_halt;
 
 #[no_mangle]
-static mut CYCLES: u32 = 2;
+static mut ULP_LOADED: bool = false;
+#[no_mangle]
+static mut LED_COUNT_ULP: u32 = 0;
+#[no_mangle]
+static mut LED_COUNT_MAIN: u32 = 0;
 
 #[no_mangle]
 fn main() {
@@ -16,29 +20,18 @@ fn main() {
     let pins = peripherals.pins;
 
     let mut delay = delay::Ulp;
-    let mut led = pins.gpio4.into_output_od().unwrap();
+    let mut led = pins.gpio2.into_output_od().unwrap();
 
-    while get_cycles() > 0 {
+    loop {
         led.set_high().unwrap();
-        delay.delay_ms(1000_u32);
+        delay.delay_ms(100_u32);
 
         led.set_low().unwrap();
-        delay.delay_ms(1000_u32);
+        delay.delay_ms(100_u32);
 
-        decr_cycles();
-    }
-}
-
-fn get_cycles() -> u32 {
-    unsafe { core::ptr::read_volatile(&CYCLES) }
-}
-
-fn decr_cycles() {
-    unsafe {
-        let cycles = core::ptr::read_volatile(&CYCLES);
-
-        if cycles > 0 {
-            core::ptr::write_volatile(&mut CYCLES, cycles - 1);
+        unsafe {
+            let led_count = core::ptr::read_volatile(&LED_COUNT_ULP);
+            core::ptr::write_volatile(&mut LED_COUNT_ULP, led_count + 1);
         }
     }
 }
