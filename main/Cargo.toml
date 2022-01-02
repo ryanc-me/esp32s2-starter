@@ -27,5 +27,5 @@ ssd1306 = "0.7"
 smol = "1.2"
 
 [build-dependencies]
-embuild = "0.26"
+embuild = "0.27"
 anyhow = "1"
