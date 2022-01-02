@@ -29,3 +29,8 @@ CONFIG_ESP_TLS_SKIP_SERVER_CERT_VERIFY=y
 CONFIG_ESP32S2_ULP_COPROC_ENABLED=y
 CONFIG_ESP32S2_ULP_COPROC_RESERVE_MEM=4096
 CONFIG_ESP32S2_ULP_COPROC_RISCV=y
+
+# speed post-sleep boot by disabling some checks
+# https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-guides/bootloader.html#fast-boot-from-deep-sleep
+CONFIG_SECURE_BOOT=n
+CONFIG_BOOTLOADER_SKIP_VALIDATE_IN_DEEP_SLEEP=n
