@@ -6,6 +6,15 @@ args = [
     "espflash COM5 ./target/xtensa-esp32s2-espidf/debug/main; espmonitor COM5",
 ]
 
+[tasks.monitor]
+workspace = false
+command = "powershell.exe"
+args = [
+    "-Command",
+    "espmonitor COM5",
+]
+
+
 [tasks.debug]
 dependencies = [
     "build",
