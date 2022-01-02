@@ -2,6 +2,7 @@
 name = "ulp"
 version = "0.1.0"
 edition = "2021"
+resolver = "2"
 
 [dependencies]
 panic-halt = "0.2"

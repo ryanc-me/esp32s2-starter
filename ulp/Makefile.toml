@@ -1,0 +1,8 @@
+[tasks.build]
+toolchain = "nightly-x86_64-unknown-linux-gnu"
+command = "cargo"
+args = [
+    "build",
+    "--target",
+    "riscv32imc-unknown-none-elf",
+]
