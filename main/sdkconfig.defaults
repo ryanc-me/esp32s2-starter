@@ -34,3 +34,6 @@ CONFIG_ESP32S2_ULP_COPROC_RISCV=y
 # https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-guides/bootloader.html#fast-boot-from-deep-sleep
 CONFIG_SECURE_BOOT=n
 CONFIG_BOOTLOADER_SKIP_VALIDATE_IN_DEEP_SLEEP=n
+
+# bump the main task stack size, because we keep running into stack overflows
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=32768

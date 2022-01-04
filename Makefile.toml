@@ -14,8 +14,8 @@ args = [
     "espmonitor COM5",
 ]
 
-
 [tasks.debug]
+workspace = false
 dependencies = [
     "build",
     "flash",

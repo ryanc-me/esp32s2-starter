@@ -17,6 +17,10 @@ embedded-svc = "0.15.4"
 esp-idf-svc = "0.34.3"
 esp-idf-hal = "0.30.0"
 embedded-hal = "0.2.6"
+url = "2"
+smol = "1.2"
+dht-sensor = "0.2.1"
+gmqtt = "0.1.1"
 
 [build-dependencies]
 embuild = "0.27"
